@@ -1,0 +1,33 @@
+---
+layout: post
+title:  "rawr asd"
+date:   2015-03-09 11:21:00
+categories: dogs abc 123
+---
+This is a post in Jekyll, the ruby thing.
+
+{% highlight python3 linenos %}
+def are_permutations(string_A, string_B):
+    letters_of_A = dict()
+    letters_of_B = dict()
+
+    for char in string_A:
+        if char in letters_of_A:
+            letters_of_A[char] += 1
+        else:
+            letters_of_A[char] = 1
+
+    for char in string_B:
+        if char in letters_of_B:
+            letters_of_B[char] += 1
+        else:
+            letters_of_B[char] = 1
+
+    for letter in letters_of_A:
+        if letter not in letters_of_B:
+            return False
+        if letters_of_A[letter] != letters_of_B[letter]:
+            return False
+
+    return True
+{% endhighlight %}
